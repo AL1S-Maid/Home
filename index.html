@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL1S-M</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/swiper.min.css">
+  <link rel="stylesheet" href="src/css/album.css">
+  <script src="src/js/vue.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
+  <script src="src/js/main.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <header class="header">
+        <nav class="navbar">
+          <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>        
+            <li><a href="#">Album</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="home">
+          <video src="src/videos/202403301617.mp4" loop autoplay muted="true"></video>
+          <div class="all">
+            <div class="left">
+              <div class="logo">
+                <img src="src/images/白子.gif">
+                <div class="name">
+                  <span style="font-size: 5rem;">AL1S-M</span>
+                </div>
+              </div>
+              <div class="description cards">
+                <p style="font-size: 18px;">人为什么要为了死亡而出生在这个世上？</p>
+                <p style="text-align: right; font-size: 18px;">--Honkai StarRail</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="videoPlayer">
+                <span class="title" style="color: #fff; font-size: 20px;">Music Name</span>
+                <div class="player">
+                  <audio src="src/videos/Luminous Memory.mp3" loop></audio>
+                  <img src="src/images/icons/play-skip-back-outline.png" class="i-icon prev">
+                  <img src="src/images/icons/play.png" class="i-icon playPause">
+                  <img src="src/images/icons/play-skip-forward-outline.png" class="i-icon next">
+                </div>
+                <div class="setline"><img src="src/images/icons/volume-high-outline.png"><input type="range" class="volumeControl" min="0" max="1" step="0.01" value="1"></div>
+              </div>
+              <span class="line">List</span>
+              <div class="list">
+                <a href="#"><div class="el-col"><img src="src/images/icons/forum.png"><span>Forum</span></div></a>
+                <a href="#"><div class="el-col"><img src="src/images/icons/music.png"><span>Music</span></div></a>
+                <a href="https://SQL.KeyFab.io"><div class="el-col"><img src="src/images/icons/server-outline.png"><span>SQL</span></div></a>
+                <a href="#"><div class="el-col"><img src="src/images/icons/toggle.png"><span>URL</span></div></a>
+                <a href="#"><div class="el-col"><img src="src/images/icons/hot.png"><span>Hot</span></div></a>
+                <a href="#"><div class="el-col"><img src="src/images/icons/settings.png"><span>Settings</span></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="services" id="Services">
+          <div class="topText">
+            <span class="time"></span>
+          </p>
+            <span class="Date"></span>
+          </p>
+            <span class="weather"></span>
+          </div>
+          <div class="inputWrpper">
+            <input type="text" placeholder="Search" spellcheck="false" type="search" aria-live="polite" autocomplete="off" class="input">
+            <ion-icon name="search-outline"></ion-icon>
+            <div class="toggle"><img src="src/images/icons/toggle.png"></div>
+          </div>
+          <div class="dropdown_menu">
+            <div class="all-engine">
+              <a href="https://github.com" target="_blank">
+                <div class="github engine">
+                  <img src="src/images/icons/github2.png">
+                  <span>Github</span>
+                </div>
+              </a>
+              <a href="https://bilibili.com" target="_blank">
+                <div class="bilibili engine">
+                  <img src="src/images/icons/bilibili.PNG">
+                  <span>Bilibili</span>
+                </div>
+              </a>
+              <a href="https://gitee.com" target="_blank">
+                <div class="gitee engine">
+                  <img src="src/images/icons/gitee.png">
+                  <span>Gitee</span>
+                </div>
+              </a>
+              <a href="https://mail.google.com/gamil" target="_blank">
+                <div class="email engine">
+                  <img src="src/images/icons/email.png">
+                  <span>Email</span>
+                </div>
+              </a>
+              <a href="https://X.com" target="_blank">
+                <div class="twitter engine">
+                  <img src="src/images/icons/twitter.png">
+                  <span>Twitter</span>
+                </div>
+              </a>
+              <a href="http://www.pixiv.net/" target="_blank">
+                <div class="pixiv engine">
+                  <img src="src/images/icons/pixiv.png">
+                  <span>Pixiv</span>
+                </div>
+              </a>
+              <a href="https://youtube.com" target="_blank">
+                <div class="youtube engine">
+                  <img src="src/images/icons/Youtube.png">
+                  <span>Youtube</span>
+                </div>
+              </a>
+              <a href="https://facebook.com" target="_blank">
+                <div class="facebook engine">
+                  <img src="src/images/icons/facebook.png">
+                  <span>Facebook</span>
+                </div>
+              </a>
+              
+              <div class="engine">
+                <!-- <img src=""> -->
+                <span style="font-weight: 800;">自定义+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="album" id="album">
+          <div class="container">
+            <div class="timeline">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image: url(./src/images/美食研究会.jpg);" data-year="Picture1">
+                    <div class="swiper-slide-content"><span class="timeline-year">Picture1</span>
+                      <h4 class="timeline-title">Blue Archive</h4>
+                      <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image: url(./src/images/lifuHina1.jpg);" data-year="Picture2">
+                    <div class="swiper-slide-content"><span class="timeline-year">Picture2</span>
+                      <h4 class="timeline-title">Blue Archive</h4>
+                      <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image: url(./src/images/shiroko.jpeg);" data-year="Picture3">
+                    <div class="swiper-slide-content"><span class="timeline-year">Picture3</span>
+                      <h4 class="timeline-title">Blue Archive</h4>
+                      <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image: url(./src/images/ARONAl.jpeg);" data-year="Picture4">
+                    <div class="swiper-slide-content"><span class="timeline-year">Picture4</span>
+                      <h4 class="timeline-title">Blue Archive</h4>
+                      <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image: url(./src/images/Noa&Yuki.jpg);" data-year="Picture5">
+                    <div class="swiper-slide-content"><span class="timeline-year">Picture5</span>
+                      <h4 class="timeline-title">Blue Archive</h4>
+                      <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image: url(./src/images/砂糖白子.JPG);" data-year="Picture6">
+                    <div class="swiper-slide-content"><span class="timeline-year">Picture6</span>
+                      <h4 class="timeline-title">Blue Archive</h4>
+                      <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about" id="about">
+          <div class="heading">
+            <h1>About</h1>
+          </div>
+          <div class="ab a1">
+            <div class="txt">
+              <h2>About me</h2>
+              <p>&emsp;&emsp;一名普通学生，编写html,css,js(全部)部分，图形与图像处理目前也由本人一并承担。目前还在学习阶段，出于个人兴趣选择了前端，喜欢一些动漫，游戏和计算机，目前该网页全由本人制作。</p>
+              <p>&emsp;&emsp;希望能够于更多前端大佬一起交流学习</p>
+            </div>
+            <div class="imghid">
+              <div class="img"></div>
+            </div>
+          </div>
+          <div class="ab a2">
+            <div class="imghid"></div>
+            <div class="img"></div>
+          
+            <div class="txt">
+              <h2>About Website</h2>
+              <p>&emsp;&emsp;目前网页尚未完工，网页整体使用Html+css+JS编写。许多元素和素材来源于网络，样式及部分功能参考他人网页
+              <p>目前作者仍处于学习阶段，网页存在许多不足，今后会尽可能优化并将网页做的越来越好</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact" id="contact">
+          <div class="heading">
+            <h1>Contact</h1>
+          </div>
+          <div class="joinpart" id="jp">
+            <!-- <div class="left">
+              <div class="square"></div>
+              <div class="tit">&emsp;Contact<br>联系我们</div>
+            </div> -->
+            <div class="right">
+              <div class="goal">
+                <h1>
+                  お問い合わせ</br>
+                  CONTACT
+                </h1>
+                <p>&emsp;&emsp;</p>
+                <p>&emsp;&emsp;The goal is to establish an excellent game production team, become an excellent game producer, 
+                and create a virtual world that people love. The team currently has only one person and knows nothing. Everyone who is interested is welcome to join! </p>
+                <p>&emsp;&emsp;Accept contact only from these and E-mail.</p>
+                <p>&emsp;&emsp;Unauthorized modification or copying of information on this website is prohibited.</p>
+                <div class="meth">
+                  <div class="icon qq">
+                    <ul>
+                      <li>QQ:123456789</li>
+                    </ul>
+                  </div>
+                  <div class="icon vx">
+                    <ul>
+                      <li>Wechat:123456789</li>
+                    </ul>
+                  </div>
+                  <a href="https://space.bilibili.com/" target="top">
+                    <div class="icon bili">
+                      <ul>
+                        <li>link to my bilibili</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <a href="https://github.com/KeyFab123" target="new front">
+                    <div class="icon gh">
+                      <ul>
+                        <li>link to my GitHub</li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          @2024-2025 | BY:AL1S-Maid | 网页版权归AL1S-Maid所有 |<a href="https://github.com/KeyFab123" style="color: #fff;">https://github.com/AL1S-Maid</a>
+        </footer>
+      </main>
+
+      <!-- <div id="loader-wrapper">
+        <div class="loader">
+          <div class="loader-circle" />
+          <div class="loader-text">
+            <span class="name"></span> 
+            <span class="tip">Loading</span>
+          </div>
+        </div>
+        <div class="loader-section section-left" />
+        <div class="loader-section section-right" />
+      </div> -->
+
+    </div>
+
+    <!-- Vue -->
+    <script  src="src/js/api.js"></script>
+    <script src="src/js/swiper.min.js"></script>
+    <script>
+      const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = 'src/images/icons/favicon.ico';
+      document.getElementsByTagName('head')[0].appendChild(link);
+      const App = {
+        mounted() {
+          //
+        }
+      };
+      Vue.createApp(App).mount('#app');
+
+      // import axios from 'axios';
+
+      // export default {
+      //   data() {
+      //     return {
+      //       location: '',
+      //       weather: ''
+      //     };
+      //   },
+      //   created() {
+      //     // 获取位置信息
+      //     navigator.geolocation.getCurrentPosition(position => {
+      //       this.location = `纬度: ${position.coords.latitude}, 经度: ${position.coords.longitude}`;
+      //     });
+
+      //     // 获取天气信息
+      //     axios.get('https://api.openweathermap.org/data/2.5/weather?lat=22.574601&lon=113.902413&appid=7f239ae39889096beca7fcf79cd67d39')
+      //     .then(response => {
+      //       this.weather = response.data.weather[0].description;
+      //     })
+      //     .catch(error => {
+      //       console.error(error);
+      //     });
+      //   }
+      // };
+
+    </script>
+
+    <script>
+      var timelineSwiper = new Swiper ('.timeline .swiper-container', {
+      direction: 'vertical',
+      loop: false,
+      speed: 1000,
+      mousewheelControl : true,
+      pagination: '.swiper-pagination',
+      paginationBulletRender: function (swiper, index, className) {
+        var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+        return '<span class="' + className + '">' + year + '</span>';
+      },
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      breakpoints: {
+        768: {
+          direction: 'horizontal',
+        }
+      },
+      effect:'slide',
+      simulateTouch:false
+      });
+    </script>
+
+    <script>
+      const volumeControl = document.querySelector('.volumeControl');
+      const title= document.querySelector('.title');
+      const prev= document.querySelector('.prev');
+      const playPause= document.querySelector('.playPause');
+      const next= document.querySelector('.next');
+      const audio= document.querySelector('audio');
+
+      // 设置音量
+      volumeControl.addEventListener('input', function() {
+        audio.volume = volumeControl.value;
+      });
+
+    // song list
+      const songList=[
+        {
+          path:"src/videos/Luminous Memory.mp3",
+          songName:"Luminous memory",
+        },
+        {
+          path:"src/videos/Target for Love.mp3",
+          songName:"Target for Love",
+        }
+      ];
+
+      let songPlaying = false;
+
+    //play song
+      const playSong = ()=>{
+        songPlaying = true;
+        audio.play();
+        // playPause.classList.add('active');
+        playPause.src='src/images/icons/pause.png';
+      }
+
+    //pause song
+      const pauseSong = () => {
+        songPlaying = false;
+        audio.pause();
+        // playPause.classList.remove('active');
+        playPause.src='src/images/icons/play.png';
+
+      }
+    //play/pause song
+        playPause.addEventListener("click",() => (songPlaying? pauseSong() : playSong()));
+
+    //load song
+      const loadSong = (songList) => {
+        title.textContent = songList.songName;
+        audio.src = songList.path;//
+      }
+      let i = 0;
+      loadSong (songList[i]);
+
+    //previous song
+      const prevSong = () => {
+        i--;
+        if (i < 0){
+          i = songList.length -1;
+        }
+        loadSong(songList[i]);
+        playSong();
+      }
+
+      prev.addEventListener("click", prevSong);
+
+    //next song
+      const nextSong = () => {
+        i++;
+        if (i > (songList.length - 1)){
+          i = 0;
+        }
+        loadSong(songList[i]);
+        playSong();
+      }
+
+      next.addEventListener("click", nextSong);
+    </script>
+  </body>
+</html>
