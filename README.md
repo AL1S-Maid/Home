@@ -17,6 +17,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Build
 
+* You need to create your own public and videos folder,put the images,font folder in it,and music and video to adjust the path yourself
 * **Installation** [node.js](https://nodejs.org/zh-cn/) **Environment**
 * Then run the `cmd` terminal with **administrator privileges** and `cd` to the project root directory
 
