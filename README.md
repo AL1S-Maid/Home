@@ -1,5 +1,5 @@
 # AL1S-Maid
-by AL1S-Maid 2024
+by AL1S-Maid
 https://github.com/AL1S-Maid/
 <p>
 <strong><h2>A1LS-M</h2></strong>
