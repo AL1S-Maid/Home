@@ -1,6 +1,5 @@
-# KeyFab
-by KeyFab
-为了页面美观性所以用英文
+by AL1S-M
+请自行添加public/videos/下的音频文件并修改项目中的路径
 <p>
 <strong><h2>A1LS-M</h2></strong>
 </p>
