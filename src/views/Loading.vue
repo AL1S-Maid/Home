@@ -7,8 +7,6 @@ defineOptions({
 
 const store = useMainStore();
 
-const siteName = import.meta.env.VITE_SITE_NAME;
-
 setTimeout(() => {
   store.imgLoadStatus = true; // 资源加载完成
 }, 500);
@@ -21,7 +19,6 @@ setTimeout(() => {
       <div class="loader-circle" />
       <div class="loader-text">
         <span class="name">
-          {{ siteName }}
         </span>
         <span class="tip"> Loading </span>
       </div>
@@ -32,6 +29,7 @@ setTimeout(() => {
 </template>
 
 <style lang="scss" scoped>
+@import '@/style/part.scss';
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -48,10 +46,8 @@ setTimeout(() => {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    @include flex-style;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     .loader-circle {
       width: 150px;
       height: 150px;
